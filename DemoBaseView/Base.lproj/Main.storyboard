@@ -20,7 +20,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zil-FC-Cq9">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFY-gP-h28">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="kaQ-oa-wb6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="QFY-gP-h28" firstAttribute="leading" secondItem="zil-FC-Cq9" secondAttribute="leading" id="BzY-mI-QvA"/>
+                                    <constraint firstItem="QFY-gP-h28" firstAttribute="top" secondItem="zil-FC-Cq9" secondAttribute="top" id="ecT-PW-pXK"/>
+                                    <constraint firstAttribute="trailing" secondItem="QFY-gP-h28" secondAttribute="trailing" id="qiF-Oz-0bI"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
