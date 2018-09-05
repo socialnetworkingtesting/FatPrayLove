@@ -17,7 +17,39 @@
                     <view key="view" contentMode="scaleToFill" id="vuQ-7O-rp7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFK-YG-Fuc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O4M-um-NGb">
+                                        <rect key="frame" x="29" y="70" width="295" height="100"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.73333333329999995" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="33Z-vU-ktH"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="94V-vp-7LS" id="qO0-TZ-tMa"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="O4M-um-NGb" secondAttribute="trailing" constant="51" id="9Ns-VQ-XbM"/>
+                                    <constraint firstItem="O4M-um-NGb" firstAttribute="leading" secondItem="cFK-YG-Fuc" secondAttribute="leading" constant="29" id="LPM-lf-pbF"/>
+                                    <constraint firstItem="O4M-um-NGb" firstAttribute="top" secondItem="cFK-YG-Fuc" secondAttribute="top" constant="70" id="bLF-Po-ZL5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cFK-YG-Fuc" firstAttribute="bottom" secondItem="kxk-Pt-kdQ" secondAttribute="bottom" id="3iH-1J-MkJ"/>
+                            <constraint firstItem="cFK-YG-Fuc" firstAttribute="leading" secondItem="kxk-Pt-kdQ" secondAttribute="leading" id="6TY-Qi-8wf"/>
+                            <constraint firstItem="cFK-YG-Fuc" firstAttribute="top" secondItem="vuQ-7O-rp7" secondAttribute="top" id="Mly-ya-Pjp"/>
+                            <constraint firstItem="cFK-YG-Fuc" firstAttribute="trailing" secondItem="kxk-Pt-kdQ" secondAttribute="trailing" id="gBW-Bb-tnv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kxk-Pt-kdQ"/>
                     </view>
                 </viewController>

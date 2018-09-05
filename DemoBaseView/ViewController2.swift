@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController2: BaseVC {
+class ViewController2: BaseVC, UITextFieldDelegate {
     
     
     override func viewDidLoad() {
@@ -30,14 +30,28 @@ class ViewController2: BaseVC {
     override func btnSearchAction() {        
         print("pressing search from viewcontroller2")
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let str = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        return checkUKPhoneNumberFormat(string: string, str: str , txtFieldPhoneNumber : textField )
     }
-    */
+    
+    func checkUKPhoneNumberFormat(string: String?, str: String? , txtFieldPhoneNumber : UITextField) -> Bool{
+        let countryCode = "+44 "
+        if string == "" {
+            return true
+        }
+        else if str!.count <= 15 {
+            if str!.count == 1 {
+                txtFieldPhoneNumber.text = countryCode + txtFieldPhoneNumber.text!
+            }
+            else if str!.count == 9 {
+                txtFieldPhoneNumber.text = txtFieldPhoneNumber.text! + " "
+            }
+            return true
+        }
+        else{
+            return false
+        }
+    }
 
 }
