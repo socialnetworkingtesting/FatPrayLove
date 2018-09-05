@@ -13,6 +13,7 @@ class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
+        print("this will be added in new branch 2")
     }
 
     override func didReceiveMemoryWarning() {
