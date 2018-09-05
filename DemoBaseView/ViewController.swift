@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         btnSearchBack.addTarget(self, action: #selector(searchbackAction), for: UIControlEvents.touchUpInside)
         btnMenu.addTarget(self, action: #selector(menuAction), for: UIControlEvents.touchUpInside)
         buttonSearch.addTarget(self, action: #selector(searchAction), for: UIControlEvents.touchUpInside)
+        navigationController?.navigationBar.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,5 +40,9 @@ class ViewController: UIViewController {
         viewSearch.isHidden = false
     }
 
+    @IBAction func btnPushTonextVC(_ sender: Any) {
+        let nextvc = storyboard?.instantiateViewController(withIdentifier: "ViewController2") as! ViewController2
+        navigationController?.pushViewController(nextvc, animated: true)
+    }
 }
 
