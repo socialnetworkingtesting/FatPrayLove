@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ViewController2: UIViewController {
-
+class ViewController2: BaseVC {
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewDidLoad(isSearch: true, vcName: "ViewController2")
         navigationController?.navigationBar.isHidden = true
+        
         print("this will be added in new branch 2")
     }
 
@@ -20,11 +23,13 @@ class ViewController2: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func btnPopToHomeAction(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+   
+    override func btnMenuAction() {
+        print("pressing menu from viewcontroller2")
     }
-    
-
+    override func btnSearchAction() {        
+        print("pressing search from viewcontroller2")
+    }
     /*
     // MARK: - Navigation
 
